@@ -16,7 +16,6 @@ public class DOCTOR extends PERSONA {
         this.especialidad = especialidad;
     }
 
-    @Override
     public void mostrarInformacion() {
         System.out.println("Nombre: " + getNombre());
         System.out.println("Edad: " + getEdad());
