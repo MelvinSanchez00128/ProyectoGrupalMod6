@@ -1,0 +1,68 @@
+
+public class Deportista {
+    private String nombre;
+    private int edad;
+    private String deporte;
+    
+    public Deportista(String nombre, int edad, String deporte) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.deporte = deporte;
+    }
+
+    public void entrenar() {
+        System.out.println(nombre + " está entrenando en " + deporte + ".");
+    }
+
+    public void competir() {
+        System.out.println(nombre + " está compitiendo en " + deporte + ".");
+    }
+
+    // Getters y Setters
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public String getDeporte() {
+        return deporte;
+    }
+
+    public void setDeporte(String deporte) {
+        this.deporte = deporte;
+    }
+}
+//Subclase Futbolista
+
+public class Futbolista extends Deportista {
+    private String posicion;
+
+    public Futbolista(String nombre, int edad, String posicion) {
+        super(nombre, edad, "Fútbol");
+        this.posicion = posicion;
+    }
+
+    public void marcarGol() {
+        System.out.println(getNombre() + " ha marcado un gol desde la posición " + posicion + "!");
+    }
+
+    // Getter y Setter de posición
+    public String getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(String posicion) {
+        this.posicion = posicion;
+    }
+}
